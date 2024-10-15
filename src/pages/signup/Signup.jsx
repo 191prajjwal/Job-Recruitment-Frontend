@@ -147,16 +147,9 @@ const [error,setError]=useState({
     })
    
     if(!isError){
-      const res= await signup(formData);
+      await signup(formData);
 
-      if(res.status===200)
-      {
-        alert("User Registered successfully")
-        navigate("/login")
-      }
-      else{
-        alert("Something went wrong")
-      }
+     
       
     }
 

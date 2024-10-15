@@ -14,9 +14,11 @@ function App() {
       <Route path="/editjob" element={<EditJob/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="list/:id" element ={<JobDetails/>}/>
+      {/* make it nested when doing navbar */}
       <Route path="/list" element={<JobList/>}> 
         <Route index element={<JobList/>}/>
-        <Route path=":id" element ={<JobDetails/>}/>
+        
       </Route>
       <Route path="*" element={<Notfound/>}/>
 

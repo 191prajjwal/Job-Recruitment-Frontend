@@ -101,7 +101,10 @@ const [error,setError]=useState({
         if(res.status===200)
         {
           alert("User logged in successfully")
-          const token=res.data.token
+
+         
+          const token=res.data
+          //token is at res.data
           localStorage.setItem("token",token)
           navigate("/")
         }
